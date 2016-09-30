@@ -16,7 +16,7 @@ if (!defined('PILUS_SHOP')) header("Location: 403.php");
 	
 $_SESSION['allow_access'] = true;
 
-// statCollector();
+statCollector();
 
 $metaOptions = "";
 
