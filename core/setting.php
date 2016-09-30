@@ -25,10 +25,10 @@ define('PACK_VERSION', '1.4.0');
 
 // Database credential
 define('PL_DBTYPE', 'mysql');
-define('PL_DBHOST', 'localhost');
-define('PL_DBUSER', 'root');
-define('PL_DBPASS', 'root');
-define('PL_DBNAME', 'pilus');
+define('PL_DBHOST', '');
+define('PL_DBUSER', '');
+define('PL_DBPASS', '');
+define('PL_DBNAME', '');
 
 // Site configuration
 define('PL_DIR', 'http://localhost/pilus/');  // define site path
