@@ -1039,8 +1039,8 @@ class Admin extends Plbase
 		$dbh = parent::hook();
 			
 		$sql = "SELECT ID, admin_login, admin_fullname, admin_email, admin_pass, admin_registered,
-				admin_activation_key, admin_reset_key, admin_resetComplete, admin_level, admin_session,
-				admin_url FROM pl_admin ORDER BY admin_login LIMIT :position, :limit";
+	                admin_activation_key, admin_reset_key, admin_resetComplete, admin_level, admin_session,
+			admin_url FROM pl_admin ORDER BY admin_login LIMIT :position, :limit";
 			
 		$sth = $dbh -> prepare($sql);
 		$sth -> bindParam(":position", $position, PDO::PARAM_INT);
@@ -1137,7 +1137,7 @@ class Admin extends Plbase
 	 * @param string $value
 	 * @return string
 	 */
-	public static function create_hash($value)
+	private static function create_hash($value)
 	{
 		return $hash = crypt($value, '$2a$12$'.substr(str_replace('+', '.', base64_encode(sha1(microtime(true), true))), 0, 22));
 	}
